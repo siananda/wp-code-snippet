@@ -20,9 +20,9 @@
 			    'post_type'              => $post_type,
 			    'post_status'            => array( 'publish' ),
 			    'posts_per_page'         => $item_num,
-		        'orderby' => $orderby,
-		        'order' => $order,
-                'post__not_in' => array($not_in),
+		            'orderby' => $orderby,
+		            'order' => $order,
+                            'post__not_in' => array($not_in),
 			);
 			switch ($key_type) :
 				case 'tax_query':
@@ -61,7 +61,7 @@
 			        $tj_query->the_post();
 			        $TJid = get_the_id();
 			        $TJitems[] = array(
-			        		'title'  	=> get_the_title(),
+			        	'title'  	=> get_the_title(),
 			                'image'  => wp_get_attachment_url( get_post_thumbnail_id($TJid)),
 			                'url'  => get_the_permalink($TJid),
 			                'date'			=> get_the_date($format),
